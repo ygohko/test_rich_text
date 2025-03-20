@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/gestures.dart';
 
 void main() {
   runApp(const MyApp());
@@ -76,7 +77,9 @@ class _MyHomePageState extends State<MyHomePage> {
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
-    final textTheme = Theme.of(context).textTheme;
+    final theme = Theme.of(context);
+    final textTheme = theme.textTheme;
+    final colorScheme = theme.colorScheme;
 
     return Scaffold(
       appBar: AppBar(
@@ -107,20 +110,44 @@ class _MyHomePageState extends State<MyHomePage> {
           // wireframe for each widget.
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            RichText(
-              text: TextSpan(
-                text: 'Hello ',
-                style: textTheme.bodyMedium,
-                children: const <TextSpan>[
-                  TextSpan(
-                    text: 'bold',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                    ),
+            Card(
+              margin: EdgeInsets.all(32.0),
+              child: Padding(
+                padding: EdgeInsets.all(16.0),
+                child: RichText(
+                  text: TextSpan(
+                    style: textTheme.bodyMedium,
+                    children: [
+                      TextSpan(
+                        text: '大見出しだよ\n',
+                        style: textTheme.headlineLarge,
+                      ),
+                      TextSpan(text: '本文だよー\n'),
+                      TextSpan(
+                        text: '中見出しだよ\n',
+                        style: textTheme.headlineMedium,
+                      ),
+                      TextSpan(text: '本文その2だよー\n'),
+                      TextSpan(
+                        text: '小見出しだよ\n',
+                        style: textTheme.headlineSmall,
+                      ),
+                      TextSpan(text: '本文その3だよー\n'),
+                      TextSpan(
+                        text: 'リンクだよー(色は自分で変えないといけないっぽい)\n',
+                        style: TextStyle(color: colorScheme.primary),
+                        recognizer: TapGestureRecognizer()..onTap = () {
+                          print('タップされたよー');
+                        },
+                      ),
+                      TextSpan(text: '(TODO: 箇条書き)\n'),
+                      TextSpan(text: '(TODO: 番号付き箇条書き)\n'),
+                      TextSpan(text: '(TODO: テーブル)\n'),
+                      TextSpan(text: '(TODO: コード)\n'),
+                    ],
                   ),
-                  TextSpan(text: ' world!'),
-                ],
-              )
+                ),
+              ),
             ),
             const Text(
               'You have pushed the button this many times:',
