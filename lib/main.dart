@@ -140,7 +140,11 @@ class _MyHomePageState extends State<MyHomePage> {
                           print('タップされたよー');
                         },
                       ),
-                      TextSpan(text: '(TODO: 箇条書き)\n'),
+                      TextSpan(text: '•'),
+                      TextSpan(text: '箇条書き\n'),
+                      // TextSpan(text: '•'),
+                      WidgetSpan(child: Icon(Icons.circle)),
+                      TextSpan(text: '箇条書きうまくいってるかなああああああああああああああああああああああああああああああああああああああああああああああ\n'),
                       TextSpan(text: '(TODO: 番号付き箇条書き)\n'),
                       TextSpan(text: '(TODO: テーブル)\n'),
                       TextSpan(text: '(TODO: コード)\n'),
