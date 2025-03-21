@@ -114,47 +114,51 @@ class _MyHomePageState extends State<MyHomePage> {
               margin: EdgeInsets.all(32.0),
               child: Padding(
                 padding: EdgeInsets.all(16.0),
-                child: RichText(
-                  text: TextSpan(
-                    style: textTheme.bodyMedium,
-                    children: [
-                      TextSpan(
-                        text: '大見出しだよ\n',
-                        style: textTheme.headlineLarge,
-                      ),
-                      TextSpan(text: '本文だよー\n'),
-                      TextSpan(
-                        text: '中見出しだよ\n',
-                        style: textTheme.headlineMedium,
-                      ),
-                      TextSpan(text: '本文その2だよー\n'),
-                      TextSpan(
-                        text: '小見出しだよ\n',
-                        style: textTheme.headlineSmall,
-                      ),
-                      TextSpan(text: '本文その3だよー\n'),
-                      TextSpan(
-                        text: 'リンクだよー(色は自分で変えないといけないっぽい)\n',
-                        style: TextStyle(color: colorScheme.primary),
-                        recognizer: TapGestureRecognizer()..onTap = () {
-                          print('タップされたよー');
-                        },
-                      ),
-                      TextSpan(text: '•'),
-                      TextSpan(text: '箇条書き\n'),
-                      // TextSpan(text: '•'),
-                      WidgetSpan(child: Icon(Icons.circle)),
-                      TextSpan(text: '箇条書きうまくいってるかなああああああああああああああああああああああああああああああああああああああああああああああ\n'),
-                      TextSpan(text: '(TODO: 番号付き箇条書き)\n'),
-                      TextSpan(text: '(TODO: テーブル)\n'),
-                      TextSpan(text: '(TODO: コード)\n'),
-                    ],
+                child: SelectionArea(
+                  child: Text.rich(
+                    TextSpan(
+                      style: textTheme.bodyMedium,
+                      children: [
+                        TextSpan(
+                          text: '大見出しだよ\n',
+                          style: textTheme.headlineLarge,
+                        ),
+                        TextSpan(text: '本文だよー\n'),
+                        TextSpan(
+                          text: '中見出しだよ\n',
+                          style: textTheme.headlineMedium,
+                        ),
+                        TextSpan(text: '本文その2だよー\n'),
+                        TextSpan(
+                          text: '小見出しだよ\n',
+                          style: textTheme.headlineSmall,
+                        ),
+                        TextSpan(text: '本文その3だよー\n'),
+                        TextSpan(
+                          text: 'リンクだよー(色は自分で変えないといけないっぽい)\n',
+                          style: TextStyle(color: colorScheme.primary),
+                          recognizer: TapGestureRecognizer()..onTap = () {
+                            print('タップされたよー');
+                          },
+                        ),
+                        TextSpan(text: '•'),
+                        TextSpan(text: '箇条書き\n'),
+                        // TextSpan(text: '•'),
+                        WidgetSpan(child: Icon(Icons.circle)),
+                        TextSpan(text: '箇条書きうまくいってるかなああああああああああああああああああああああああああああああああああああああああああああああ\n'),
+                        TextSpan(text: '(TODO: 番号付き箇条書き)\n'),
+                        TextSpan(text: '(TODO: テーブル)\n'),
+                        TextSpan(text: '(TODO: コード)\n'),
+                      ],
+                    ),
                   ),
                 ),
               ),
             ),
-            const Text(
-              'You have pushed the button this many times:',
+            SelectionArea(
+              child: const Text(
+                'You have pushed the button this many times:',
+              ),
             ),
             Text(
               '$_counter',
