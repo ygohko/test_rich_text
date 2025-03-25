@@ -175,6 +175,36 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                         ],
                       ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            width: 20.0,
+                            child: const Text('*'),
+                          ),
+                          Text.rich(
+                            TextSpan(
+                              text: '箇条書きだよー',
+                              style: textTheme.bodyMedium,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            width: 20.0,
+                            child: const Text('1.'),
+                          ),
+                          Text.rich(
+                            TextSpan(
+                              text: '箇条書きその2だよー',
+                              style: textTheme.bodyMedium,
+                            ),
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                 ),
