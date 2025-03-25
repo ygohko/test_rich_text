@@ -111,7 +111,6 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Card(
-              margin: EdgeInsets.all(16.0),
               child: Padding(
                 padding: EdgeInsets.all(16.0),
                 child: SelectionArea(
@@ -121,48 +120,60 @@ class _MyHomePageState extends State<MyHomePage> {
                     children: [
                       Text.rich(
                         TextSpan(
-                          text: '大見出しだよ\n',
+                          text: '大見出しだよ',
                           style: textTheme.headlineLarge,
                         ),
                       ),
                       Text.rich(
                         TextSpan(
-                          text: '本文だよー\n',
+                          text: '本文だよー',
                           style: textTheme.bodyMedium,
                         ),
                       ),
                       Text.rich(
                         TextSpan(
-                          text: '中見出しだよ\n',
+                          text: '中見出しだよ',
                           style: textTheme.headlineMedium,
                         ),
                       ),
                       Text.rich(
                         TextSpan(
-                          text: '本文その2だよー\n',
+                          text: '本文その2だよー',
                           style: textTheme.bodyMedium,
                         ),
                       ),
                       Text.rich(
                         TextSpan(
-                          text: '小見出しだよ\n',
+                          text: '小見出しだよ',
                           style: textTheme.headlineSmall,
                         ),
                       ),
                       Text.rich(
                         TextSpan(
-                          text: '本文その3だよー\n',
+                          text: '本文その3だよー',
                           style: textTheme.bodyMedium,
                         ),
                       ),
                       Text.rich(
                         TextSpan(
-                          text: 'リンクだよー(色は自分で変えないといけないっぽい)\n',
+                          text: 'リンクだよー(色は自分で変えないといけないっぽい)',
                           style: TextStyle(color: colorScheme.primary),
                           recognizer: TapGestureRecognizer()..onTap = () {
                             print('タップされたよー');
                           },
                         ),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          SizedBox(width: 50.0),
+                          Text.rich(
+                            TextSpan(
+                              text: 'インデントだよー',
+                              style: textTheme.bodyMedium,
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
