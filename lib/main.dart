@@ -111,11 +111,13 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Card(
-              margin: EdgeInsets.all(32.0),
+              margin: EdgeInsets.all(16.0),
               child: Padding(
                 padding: EdgeInsets.all(16.0),
                 child: SelectionArea(
                   child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text.rich(
                         TextSpan(
@@ -126,7 +128,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       Text.rich(
                         TextSpan(
                           text: '本文だよー\n',
-                          style: textTheme.headlineMedium,
+                          style: textTheme.bodyMedium,
                         ),
                       ),
                       Text.rich(
@@ -138,7 +140,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       Text.rich(
                         TextSpan(
                           text: '本文その2だよー\n',
-                          style: textTheme.headlineMedium,
+                          style: textTheme.bodyMedium,
                         ),
                       ),
                       Text.rich(
@@ -150,7 +152,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       Text.rich(
                         TextSpan(
                           text: '本文その3だよー\n',
-                          style: textTheme.headlineMedium,
+                          style: textTheme.bodyMedium,
                         ),
                       ),
                       Text.rich(
