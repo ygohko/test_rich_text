@@ -115,25 +115,45 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Padding(
                 padding: EdgeInsets.all(16.0),
                 child: SelectionArea(
-                  child: Text.rich(
-                    TextSpan(
-                      style: textTheme.bodyMedium,
-                      children: [
+                  child: Column(
+                    children: [
+                      Text.rich(
                         TextSpan(
                           text: '大見出しだよ\n',
                           style: textTheme.headlineLarge,
                         ),
-                        TextSpan(text: '本文だよー\n'),
+                      ),
+                      Text.rich(
+                        TextSpan(
+                          text: '本文だよー\n',
+                          style: textTheme.headlineMedium,
+                        ),
+                      ),
+                      Text.rich(
                         TextSpan(
                           text: '中見出しだよ\n',
                           style: textTheme.headlineMedium,
                         ),
-                        TextSpan(text: '本文その2だよー\n'),
+                      ),
+                      Text.rich(
+                        TextSpan(
+                          text: '本文その2だよー\n',
+                          style: textTheme.headlineMedium,
+                        ),
+                      ),
+                      Text.rich(
                         TextSpan(
                           text: '小見出しだよ\n',
                           style: textTheme.headlineSmall,
                         ),
-                        TextSpan(text: '本文その3だよー\n'),
+                      ),
+                      Text.rich(
+                        TextSpan(
+                          text: '本文その3だよー\n',
+                          style: textTheme.headlineMedium,
+                        ),
+                      ),
+                      Text.rich(
                         TextSpan(
                           text: 'リンクだよー(色は自分で変えないといけないっぽい)\n',
                           style: TextStyle(color: colorScheme.primary),
@@ -141,16 +161,8 @@ class _MyHomePageState extends State<MyHomePage> {
                             print('タップされたよー');
                           },
                         ),
-                        TextSpan(text: '•'),
-                        TextSpan(text: '箇条書き\n'),
-                        // TextSpan(text: '•'),
-                        WidgetSpan(child: Icon(Icons.circle)),
-                        TextSpan(text: '箇条書きうまくいってるかなああああああああああああああああああああああああああああああああああああああああああああああ\n'),
-                        TextSpan(text: '(TODO: 番号付き箇条書き)\n'),
-                        TextSpan(text: '(TODO: テーブル)\n'),
-                        TextSpan(text: '(TODO: コード)\n'),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
               ),
